@@ -1,0 +1,81 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+    width: 100%;
+}
+
+#parent {
+    height: 100%;
+    width: 100%;
+    background-color: #111;
+    display: flex; /* to parent by default rows */
+    align-items: center; /*y-axis cross axis */
+    justify-content: space-evenly; /*x-axis main axis */
+    gap: 20 px;
+    flex-wrap: no wrap; /* to change the line and not necessarily adjust in one line by shrinking the size of the child elements */
+    /* flex-direction: column-reverse; to change the direction of the flex items */
+}
+/* if we have diplay flex for parent child elements gets property to shrink itself so to avoud this we use flex-shrink: 0; to avoid shrinking of child elements */
+#child1{
+    height: 200px;
+    width: 200px; 
+    background-color: crimson;
+    flex-shrink: 0;
+}
+
+#child2{
+    height: 200px;
+    width: 200px; 
+    background-color: lightseagreen;
+}
+
+#child3{
+    height: 200px;
+    width: 200px; 
+    background-color: lightblue;
+}
+
+#child4{
+    height: 200px;
+    width: 200px; 
+    background-color: gold;
+}
+
+#parent2{
+    height: 100%;
+    width: 100%;
+    background-color: #111;
+    display: grid;
+    grid-template-columns: 1fr 1fr ; /*fr means fraction */
+    /* grid-template-rows: 100px 100px 200px; */
+    /* grid-auto-flow: row */
+}
+
+#child5 {
+    background-color: crimson;
+    border: 2px solid white;
+    height: 100px;
+    width: 100px;
+    align-self: center; /* to align the child element in the center of the grid cell */
+    justify-self: center; /* to align the child element in the center of the grid cell */
+}
+
+#child6 {
+    background-color: lightseagreen;
+    border: 2px solid white;
+}
+
+#child7 {
+    background-color: lightblue;
+    border: 2px solid white;
+}
+
+#child8 {
+    background-color: lightgoldenrodyellow;
+    border: 2px solid white;
+}
